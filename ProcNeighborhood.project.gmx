@@ -5,9 +5,32 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\Window_spr</sprite>
+    <sprite>sprites\TreePH_spr</sprite>
+    <sprite>sprites\HousePH_spr</sprite>
+    <sprite>sprites\PathPH_spr</sprite>
+    <sprite>sprites\Grass_spr</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\init_global_colors.gml</script>
+    <script>scripts\get_input.gml</script>
+    <script>scripts\get_base_points.gml</script>
+    <script>scripts\draw_base_points.gml</script>
+  </scripts>
+  <objects name="objects">
+    <object>objects\Tree_obj</object>
+    <object>objects\House_obj</object>
+    <object>objects\Path_obj</object>
+    <object>objects\Control_obj</object>
+    <object>objects\DrawPointsParent</object>
+    <object>objects\Grass_obj</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\Game_rm</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
