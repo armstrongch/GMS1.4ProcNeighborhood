@@ -11,6 +11,7 @@
     <sprite>sprites\HousePH_spr</sprite>
     <sprite>sprites\PathPH_spr</sprite>
     <sprite>sprites\Grass_spr</sprite>
+    <sprite>sprites\PlayerPH_spr</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -27,6 +28,7 @@
     <object>objects\Control_obj</object>
     <object>objects\DrawPointsParent</object>
     <object>objects\Grass_obj</object>
+    <object>objects\Player_obj</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Game_rm</room>
