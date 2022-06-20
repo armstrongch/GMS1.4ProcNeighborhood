@@ -17,6 +17,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\init_global_colors.gml</script>
+    <script>scripts\increment_global_color.gml</script>
     <script>scripts\get_input.gml</script>
     <script>scripts\get_base_points.gml</script>
     <script>scripts\draw_base_points.gml</script>
@@ -29,6 +30,7 @@
     <object>objects\DrawPointsParent</object>
     <object>objects\Grass_obj</object>
     <object>objects\Player_obj</object>
+    <object>objects\ColorManager_obj</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Game_rm</room>

@@ -10,9 +10,7 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code>init_global_colors();
-background_color = global.light_color;
-instance_create(0, 0, Control_obj);
+  <code>instance_create(0, 0, Control_obj);
 
 for (var i = 0; i &lt; room_width; i += 32)
 {
