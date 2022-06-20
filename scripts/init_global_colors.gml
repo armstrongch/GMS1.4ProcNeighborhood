@@ -31,7 +31,6 @@ with (ColorManager_obj)
     dark_colors[max_color_count] = make_color_rgb(123,28,123);
     light_colors[max_color_count] = make_color_rgb(4,171,156);
     max_color_count += 1;
-    
     current_color_index = max_color_count;
     increment_global_color();
 }
