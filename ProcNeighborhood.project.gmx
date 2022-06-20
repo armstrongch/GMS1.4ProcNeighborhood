@@ -22,17 +22,21 @@
     <script>scripts\get_input.gml</script>
     <script>scripts\get_base_points.gml</script>
     <script>scripts\draw_base_points.gml</script>
+    <script>scripts\move_player.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\Tree_obj</object>
-    <object>objects\House_obj</object>
-    <object>objects\TallGrass_obj</object>
-    <object>objects\Path_obj</object>
     <object>objects\Control_obj</object>
     <object>objects\DrawPointsParent</object>
-    <object>objects\Grass_obj</object>
     <object>objects\Player_obj</object>
     <object>objects\ColorManager_obj</object>
+    <object>objects\Camera_obj</object>
+    <objects name="Scenery">
+      <object>objects\Grass_obj</object>
+      <object>objects\Tree_obj</object>
+      <object>objects\House_obj</object>
+      <object>objects\TallGrass_obj</object>
+      <object>objects\Path_obj</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\Game_rm</room>
