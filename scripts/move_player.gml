@@ -19,8 +19,6 @@ else if (hspeed < -max_speed) { hspeed = -max_speed; }
 
 if (speed > max_speed) { speed = max_speed; }
 
-friction = 0.3;
-
 up = false; down = false; left = false; right = false;
 
 if (speed > 0)
@@ -31,4 +29,12 @@ if (speed > 0)
         animation_counter = 0;
         get_base_points(type);
     }
+}
+
+friction = 0.3;
+
+//my own gravity implementation
+if (vspeed != 0)
+{
+    vspeed += 0.2;
 }
