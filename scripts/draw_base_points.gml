@@ -66,4 +66,27 @@ switch(argument0)
             );
         }
         break;
+    
+    case "player":
+        draw_set_color(global.dark_color);
+        draw_triangle(
+            x+base_points_x[0], y+base_points_y[0],
+            x+base_points_x[1], y+base_points_y[1],
+            x+base_points_x[2], y+base_points_y[2],
+            false);
+        draw_circle(x+base_points_x[3], y+base_points_y[3], base_points_x[4], false);
+        break;
+    
+    case "tall_grass":
+        draw_set_color(global.dark_color);
+        for (var i = 0; i < 5; i += 1)
+        {
+            draw_triangle(
+                x+base_points_x[i], y+base_points_x[5],
+                x+base_points_x[i]+base_points_y[5], y+base_points_x[5],
+                x+base_points_x[i] + base_points_y[5]/2, y+base_points_y[i],
+                false
+            );
+        }
+        break;
 }

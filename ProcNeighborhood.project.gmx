@@ -12,6 +12,7 @@
     <sprite>sprites\PathPH_spr</sprite>
     <sprite>sprites\Grass_spr</sprite>
     <sprite>sprites\PlayerPH_spr</sprite>
+    <sprite>sprites\TallGrassPH_spr</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -25,6 +26,7 @@
   <objects name="objects">
     <object>objects\Tree_obj</object>
     <object>objects\House_obj</object>
+    <object>objects\TallGrass_obj</object>
     <object>objects\Path_obj</object>
     <object>objects\Control_obj</object>
     <object>objects\DrawPointsParent</object>

@@ -78,4 +78,47 @@ switch(argument0)
         //sprite_index
         base_points_x[3] = irandom(4);
         break;
+        
+    case "player":
+        //triangle bottom
+        base_points_x[0] = max_size/2 - border_size/4 + irandom(border_size/2);
+        base_points_y[0] = max_size;
+        
+        //triangle left
+        base_points_x[1] = border_size + irandom(border_size*0.5);
+        base_points_y[1] = max_size/2 + irandom(max_size/4);
+        
+        //triangle right
+        base_points_x[2] = max_size - border_size - irandom(border_size*0.5);
+        base_points_y[2] = max_size/2 + irandom(max_size/4);
+        
+        //circle position
+        var middle_x = (base_points_x[2] + base_points_x[1]) / 2;
+        var middle_y = (base_points_y[2] + base_points_y[1]) / 2;
+    
+        base_points_x[3] = middle_x;
+        base_points_y[3] = middle_y - border_size/2;
+        
+        //circle radius
+        base_points_x[4] = border_size/2;
+          
+        break;
+    
+    case "tall_grass":
+        temp = ds_list_create();
+        for (var i = 0; i < max_size; i += ceil(max_size/8))
+        {
+            ds_list_add(temp, i);
+        }
+        ds_list_shuffle(temp);
+        for (var i = 0; i < 5; i += 1)
+        {
+            base_points_x[i] = ds_list_find_value(temp, i);
+            base_points_y[i] = irandom(border_size);
+        }
+        ds_list_destroy(temp);
+        //bottom
+        base_points_x[5] = max_size;
+        base_points_y[5] = ceil(max_size/8);
+        break;
 }
