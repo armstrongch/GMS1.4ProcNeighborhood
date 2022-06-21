@@ -23,6 +23,7 @@
     <script>scripts\get_base_points.gml</script>
     <script>scripts\draw_base_points.gml</script>
     <script>scripts\move_player.gml</script>
+    <script>scripts\random_wiggle.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\Control_obj</object>

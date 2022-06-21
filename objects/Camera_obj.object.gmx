@@ -25,8 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = floor(Player_obj.x/320)*320 + 160;
-y = floor(Player_obj.y/320)*320 + 160;
+            <string>var target_x = floor(Player_obj.x/320)*320 + 160;
+var target_y = floor(Player_obj.y/320)*320 + 160;
+
+if (x != target_x) || (y != target_y)
+{
+    x = target_x;
+    y = target_y;
+    increment_global_color();
+}
 </string>
           </argument>
         </arguments>

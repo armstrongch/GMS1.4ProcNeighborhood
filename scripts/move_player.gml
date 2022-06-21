@@ -22,3 +22,13 @@ if (speed > max_speed) { speed = max_speed; }
 friction = 0.3;
 
 up = false; down = false; left = false; right = false;
+
+if (speed > 0)
+{
+    animation_counter += 1;
+    if (animation_counter >= 8)
+    {
+        animation_counter = 0;
+        get_base_points(type);
+    }
+}

@@ -28,6 +28,7 @@
             <string>type = "player";
 event_inherited();
 instance_create(x, y, Camera_obj);
+animation_counter = 0;
 </string>
           </argument>
         </arguments>

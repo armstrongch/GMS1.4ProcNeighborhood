@@ -27,9 +27,9 @@
             <kind>1</kind>
             <string>randomize();
 instance_create(x, y, ColorManager_obj);
-
-//alarm_counter = 15;
-//alarm[0] = alarm_counter;
+wiggle_counter = 0;
+wiggle_alarm = 10;
+alarm[0] = wiggle_alarm;
 </string>
           </argument>
         </arguments>
@@ -52,8 +52,9 @@ instance_create(x, y, ColorManager_obj);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with (DrawPointsParent) { get_base_points(type); }
-alarm[0] = alarm_counter;
+            <string>alarm[0] = wiggle_alarm;
+wiggle_counter += 1;
+random_wiggle(wiggle_counter mod 7);
 </string>
           </argument>
         </arguments>
