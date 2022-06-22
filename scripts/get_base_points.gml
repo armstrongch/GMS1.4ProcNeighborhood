@@ -3,6 +3,16 @@ var max_size = 31;
 
 switch(argument0)
 {
+    case "fence":
+        //2 missing posts:
+        base_points_x[0] = irandom(7);
+        base_points_x[1] = base_points_x[0] - 2;
+        if (base_points_x[1] < 0) { base_points_x[1] += 4;}
+        //crossbar height
+        base_points_y[0] = border_size + irandom(max_size - border_size*2);
+        base_points_y[1] = base_points_y[0] - border_size/2 + irandom(border_size);
+        break;
+    
     case "tree":
         //bottom left
         base_points_x[0] = irandom(border_size);

@@ -19,6 +19,15 @@ else if (hspeed < -max_speed) { hspeed = -max_speed; }
 
 if (speed > max_speed) { speed = max_speed; }
 
+for (var i = 0; i < instance_number(DrawPointsParent); i += 1)
+{
+    var test_collider = instance_find(DrawPointsParent, i);
+    if (test_collider.visible && test_collider.id != id)
+    {
+        
+    }
+}
+
 up = false; down = false; left = false; right = false;
 
 if (speed > 0)
@@ -38,3 +47,9 @@ if (vspeed != 0)
 {
     vspeed += 0.2;
 }
+
+if (x < 16) { x = 16; }
+else if (x > room_width-16) { x = room_width-16; }
+
+if (y < 16) { y = 16; }
+else if (y > room_height-16) { y = room_height-16;}
