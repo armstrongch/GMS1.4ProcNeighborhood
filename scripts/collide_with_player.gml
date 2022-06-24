@@ -1,25 +1,19 @@
-x_center = x+16;
-y_center = y+16;
-//Player origin is 16,16, everything else is at 0,0
+center_x = x+16;
+center_y = y+16;
 
+x_dist = abs(Player_obj.x - center_x);
+y_dist = abs(Player_obj.y - center_y);
 
-if (abs(x_center - Player_obj.x) < 16) && (abs(y_center - Player_obj.y) < 16)
+if (x_dist < 32 && y_dist < 32)
 {
-    if (x_center > Player_obj.x)
+    if (y_dist < x_dist)
     {
-        Player_obj.x = min(Player_obj.x, x_center-16);
+        if (Player_obj.x < center_x) { Player_obj.x = center_x - 32; }
+        else { Player_obj.x = center_x + 32; }
     }
     else
     {
-        Player_obj.x = max(Player_obj.x, x_center+16);
-    }
-    
-    if (y_center > Player_obj.y)
-    {
-        Player_obj.y = min(Player_obj.y, y_center-16);
-    }
-    else
-    {
-        Player_obj.y = max(Player_obj.y, y_center+16);
+        if (Player_obj.y < center_y) { Player_obj.y = center_y - 32; }
+        else { Player_obj.y = center_y + 32; }
     }
 }

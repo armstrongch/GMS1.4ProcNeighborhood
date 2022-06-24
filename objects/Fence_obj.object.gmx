@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>type = "fence";
 event_inherited();
+solid_collisions = true;
 </string>
           </argument>
         </arguments>

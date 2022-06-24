@@ -50,6 +50,11 @@ solid_collisions = false;
           <argument>
             <kind>1</kind>
             <string>visible = (abs(x-Camera_obj.x) &lt;= 200) &amp;&amp; (abs(y-Camera_obj.y) &lt;= 200);
+
+if (solid_collisions)
+{
+    collide_with_player();
+}
 </string>
           </argument>
         </arguments>
