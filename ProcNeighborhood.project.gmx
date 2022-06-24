@@ -14,6 +14,8 @@
     <sprite>sprites\PlayerPH_spr</sprite>
     <sprite>sprites\TallGrassPH_spr</sprite>
     <sprite>sprites\FencePH_spr</sprite>
+    <sprite>sprites\Wave_spr</sprite>
+    <sprite>sprites\WaterPH_spr</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -38,6 +40,7 @@
       <object>objects\Tree_obj</object>
       <object>objects\House_obj</object>
       <object>objects\Fence_obj</object>
+      <object>objects\Water_obj</object>
       <object>objects\TallGrass_obj</object>
       <object>objects\Path_obj</object>
     </objects>

@@ -1,5 +1,16 @@
 switch(argument0)
 {
+    case "water":
+        draw_set_color(global.dark_color);
+        draw_rectangle(x, y, x+31, y+31, false);
+        for (var i = 0; i < 3; i += 1)
+        {
+            draw_sprite_ext(Wave_spr, animation_counter,
+                x+base_points_x[i], y+base_points_y[i],
+                1, 1, 0, global.light_color, 1);
+        }
+        break;
+    
     case "fence":
         draw_set_color(global.dark_color);
         for (var i = 0; i < 8; i += 1)
