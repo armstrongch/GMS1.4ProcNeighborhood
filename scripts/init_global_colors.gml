@@ -21,7 +21,7 @@ with (ColorManager_obj)
     dark_colors[max_color_count] = make_color_rgb(251,180,140);
     light_colors[max_color_count] = make_color_rgb(52,124,76);
     max_color_count += 1;
-    
+    /*
     //deep blue + yellow skeletor from Riverbottom
     dark_colors[max_color_count] = make_color_rgb(75,59,147);
     light_colors[max_color_count] = make_color_rgb(244,236,68);
@@ -31,6 +31,8 @@ with (ColorManager_obj)
     dark_colors[max_color_count] = make_color_rgb(123,28,123);
     light_colors[max_color_count] = make_color_rgb(4,171,156);
     max_color_count += 1;
+    */
+    
     current_color_index = max_color_count;
     increment_global_color();
 }

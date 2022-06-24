@@ -25,45 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>relative_dpad_x = 80;
-relative_dpad_y = 80;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>var target_x = floor((Player_obj.x+16)/320)*320 + 160;
-var target_y = floor((Player_obj.y+16)/320)*320 + 160;
-
-if target_x &gt;= 0
-&amp;&amp; target_y &gt;= 0
-&amp;&amp; target_x &lt; room_width
-&amp;&amp; target_y &lt; room_height
-{  
-    if (x != target_x) || (y != target_y)
-    {
-        x = target_x;
-        y = target_y;
-        increment_global_color();
-    }
-}
+            <string>auto_wiggle = true;
 </string>
           </argument>
         </arguments>

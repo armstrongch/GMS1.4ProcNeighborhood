@@ -36,7 +36,7 @@ if (speed > 0)
     if (animation_counter >= 8)
     {
         animation_counter = 0;
-        get_base_points(type);
+        if (Config_obj.auto_wiggle) { get_base_points(type); }
     }
 }
 

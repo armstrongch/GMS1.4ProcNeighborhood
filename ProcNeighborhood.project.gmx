@@ -40,6 +40,7 @@
       <object>objects\TallGrass_obj</object>
       <object>objects\Path_obj</object>
     </objects>
+    <object>objects\Config_obj</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Game_rm</room>
