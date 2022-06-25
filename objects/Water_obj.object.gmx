@@ -51,10 +51,10 @@ animation_counter = 0;
           <argument>
             <kind>1</kind>
             <string>event_inherited();
-animation_counter += 1;
+animation_counter += 0.5;
 for (i = 0; i &lt; 3; i += 1)
 {
-    base_points_x[i] += 1;
+    base_points_x[i] += 0.5;
 }
 </string>
           </argument>

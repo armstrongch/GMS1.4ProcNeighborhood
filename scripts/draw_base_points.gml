@@ -3,11 +3,14 @@ switch(argument0)
     case "water":
         draw_set_color(global.dark_color);
         draw_rectangle(x, y, x+31, y+31, false);
-        for (var i = 0; i < 3; i += 1)
+        if (animation_counter <= 15)
         {
-            draw_sprite_ext(Wave_spr, animation_counter,
-                x+base_points_x[i], y+base_points_y[i],
-                1, 1, 0, global.light_color, 1);
+            for (var i = 0; i < 3; i += 1)
+            {
+                draw_sprite_ext(Wave_spr, animation_counter,
+                    x+base_points_x[i], y+base_points_y[i],
+                    1, 1, 0, global.light_color, 1);
+            }
         }
         break;
     
@@ -18,7 +21,7 @@ switch(argument0)
             if (i != base_points_x[0] && i != base_points_x[1])
             {
                 draw_rectangle(x+i*4, y+6, x+i*4+2, y+28, false);
-                draw_triangle(x+i*4, y+6, x+i*4+2, y+6, x+i+4+1, y+2, false);
+                draw_triangle(x+i*4, y+6, x+i*4+2, y+6, x+i*4+1, y+2, false);
             }
         }
         draw_line_width(x+1, y+base_points_y[0]-3, x+30, y+base_points_y[1]-3, 2);

@@ -9,6 +9,8 @@ switch(argument0)
             base_points_x[i] = border_size/2 + irandom(border_size);
             base_points_y[i] = border_size + i*(max_size-border_size*1.5)/2;
         }
+        animation_counter = 0;
+        break;
     
     case "fence":
         //2 missing posts:
