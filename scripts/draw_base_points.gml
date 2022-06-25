@@ -2,7 +2,25 @@ switch(argument0)
 {
     case "water":
         draw_set_color(global.dark_color);
-        draw_rectangle(x, y, x+31, y+31, false);
+        //draw_rectangle(x, y, x+31, y+31, false);
+        draw_circle(x+16, y+16, 16, false);
+        if (collision_point(x+48, y+16, Water_obj, false, true))
+        {
+            draw_rectangle(x+16, y, x+32, y+32, false);
+        }
+        if (collision_point(x-16, y+16, Water_obj, false, true))
+        {
+            draw_rectangle(x+16, y, x, y+32, false);
+        }
+        if (collision_point(x+16, y+48, Water_obj, false, true))
+        {
+            draw_rectangle(x, y+16, x+32, y+32, false);
+        }
+        if (collision_point(x+16, y-16, Water_obj, false, true))
+        {
+            draw_rectangle(x, y+16, x+32, y, false);
+        }
+        
         if (animation_counter <= 15)
         {
             for (var i = 0; i < 3; i += 1)
