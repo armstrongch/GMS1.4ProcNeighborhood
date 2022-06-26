@@ -3,6 +3,13 @@ var max_size = 31;
 
 switch(argument0)
 {
+    case "smoke":
+        //starting angle
+        base_points_x[0] = irandom(60);
+        //radius
+        base_points_y[0] = border_size*0.75 + irandom(border_size*0.5);
+        break;
+    
     case "water":
         for (var i = 0; i < 3; i += 1)
         {

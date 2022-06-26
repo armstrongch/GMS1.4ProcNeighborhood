@@ -1,5 +1,20 @@
 switch(argument0)
 {
+    case "smoke":
+        var center_x = x + 16;
+        var center_y = y + 16;
+        draw_set_color(global.dark_color);
+        draw_circle(center_x, center_y, 8, false);
+        for (var i = 0; i < 360; i += 60)
+        {
+            draw_circle(
+                center_x + cos((base_points_x[0]+i)/180*pi)*8,
+                center_y - sin((base_points_x[0]+i)/180*pi)*8,
+                base_points_y[0], false);
+        }
+    
+        break;
+    
     case "water":
         draw_set_color(global.dark_color);
         //draw_rectangle(x, y, x+31, y+31, false);

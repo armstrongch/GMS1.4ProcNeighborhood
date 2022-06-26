@@ -42,6 +42,7 @@
       <object>objects\Fence_obj</object>
       <object>objects\Water_obj</object>
       <object>objects\TallGrass_obj</object>
+      <object>objects\Smoke_obj</object>
       <object>objects\Path_obj</object>
     </objects>
     <object>objects\Config_obj</object>
