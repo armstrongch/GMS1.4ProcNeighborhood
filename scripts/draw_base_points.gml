@@ -4,6 +4,7 @@ switch(argument0)
         var center_x = x + 16;
         var center_y = y + 16;
         draw_set_color(global.dark_color);
+        draw_set_alpha(image_alpha);
         draw_circle(center_x, center_y, 8, false);
         for (var i = 0; i < 360; i += 60)
         {
@@ -12,7 +13,7 @@ switch(argument0)
                 center_y - sin((base_points_x[0]+i)/180*pi)*8,
                 base_points_y[0], false);
         }
-    
+        draw_set_alpha(1);
         break;
     
     case "water":

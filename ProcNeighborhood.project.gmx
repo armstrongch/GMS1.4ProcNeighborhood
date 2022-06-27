@@ -28,12 +28,14 @@
     <script>scripts\move_player.gml</script>
     <script>scripts\random_wiggle.gml</script>
     <script>scripts\collide_with_player.gml</script>
+    <script>scripts\draw_ui.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\Control_obj</object>
     <object>objects\DrawPointsParent</object>
     <object>objects\Player_obj</object>
     <object>objects\ColorManager_obj</object>
+    <object>objects\CameraViewMarker_obj</object>
     <object>objects\Camera_obj</object>
     <objects name="Scenery">
       <object>objects\Grass_obj</object>

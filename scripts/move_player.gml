@@ -18,13 +18,31 @@ if (hspeed > max_speed) { hspeed = max_speed; }
 else if (hspeed < -max_speed) { hspeed = -max_speed; }
 
 if (speed > max_speed) { speed = max_speed; }
-
+/*
 for (var i = 0; i < instance_number(DrawPointsParent); i += 1)
 {
     var test_collider = instance_find(DrawPointsParent, i);
     if (test_collider.visible && test_collider.id != id)
     {
         
+    }
+}
+*/
+
+if (up || down || left || right)
+{
+    var smoke_dist = 999;
+    if (instance_number(Smoke_obj) > 0)
+    {
+        var nearest_smoke = instance_nearest(x-16, y-16, Smoke_obj);
+        smoke_dist = point_distance(x, y, nearest_smoke.x+16, nearest_smoke.y+16);
+    }
+    
+    if (smoke_dist >= 96)
+    {
+        var smoke = instance_create(x-16, y-16, Smoke_obj);
+        smoke.speed = 1;
+        smoke.direction = direction + 180;
     }
 }
 
@@ -52,4 +70,4 @@ if (x < 16) { x = 16; }
 else if (x > room_width-16) { x = room_width-16; }
 
 if (y < 16) { y = 16; }
-else if (y > room_height-16) { y = room_height-16;}
+else if (y > room_height-176) { y = room_height-176;}

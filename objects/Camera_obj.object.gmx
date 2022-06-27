@@ -25,8 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>relative_dpad_x = 80;
-relative_dpad_y = 80;
+            <string>instance_create(x, y, CameraViewMarker_obj);
 </string>
           </argument>
         </arguments>
