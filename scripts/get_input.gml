@@ -21,11 +21,15 @@ with (Player_obj)
     hold_right = keyboard_check(vk_right) || keyboard_check(ord('D'));
     
     if !(press_up || press_down || press_left || press_right || hold_up || hold_down || hold_left || hold_right)
+    && (point_distance(Control_obj.dpad_x, Control_obj.dpad_y, mouse_x, mouse_y) <= Control_obj.dpad_rad)
     {
-        /*mouse_up = Camera_obj.y + Camera_obj.relative_dpad_y - mouse_y > 32;    
-        mouse_down = mouse_y - (Camera_obj.y + Camera_obj.relative_dpad_y) > 32;
-        mouse_left = Camera_obj.x + Camera_obj.relative_dpad_x - mouse_x > 32;
-        mouse_right = mouse_x - (Camera_obj.x + Camera_obj.relative_dpad_x) > 32;
+        var mouse_dir = point_direction(Control_obj.dpad_x, Control_obj.dpad_y, mouse_x, mouse_y);
+        
+        
+        mouse_up = (abs(angle_difference(mouse_dir, 90)) <= 45*1.5);
+        mouse_down = (abs(angle_difference(mouse_dir, 270)) <= 45*1.5);
+        mouse_left = (abs(angle_difference(mouse_dir, 180)) <= 45*1.5);
+        mouse_right = (abs(angle_difference(mouse_dir, 0)) <= 45*1.5);
         
         press_up = mouse_up && (mouse_check_button_pressed(mb_left));
         press_down = mouse_down && (mouse_check_button_pressed(mb_left));
@@ -35,8 +39,16 @@ with (Player_obj)
         hold_up = mouse_up && (mouse_check_button(mb_left));
         hold_down = mouse_down && (mouse_check_button(mb_left));
         hold_left = mouse_left && (mouse_check_button(mb_left));
-        hold_right = mouse_right && (mouse_check_button(mb_left));*/
+        hold_right = mouse_right && (mouse_check_button(mb_left));
     }
     
     move_player();
+    
+    if (hold_up) { Control_obj.thumbstick_ymod = -1; }
+    else if (hold_down) { Control_obj.thumbstick_ymod = 1; }
+    else { Control_obj.thumbstick_ymod = 0; }
+    
+    if (hold_left) { Control_obj.thumbstick_xmod = -1; }
+    else if (hold_right) { Control_obj.thumbstick_xmod = 1; }
+    else { Control_obj.thumbstick_xmod = 0; }
 }

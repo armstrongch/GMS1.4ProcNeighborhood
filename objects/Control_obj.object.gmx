@@ -31,6 +31,12 @@ instance_create(x, y, Config_obj);
 wiggle_counter = 0;
 wiggle_alarm = 10;
 alarm[0] = wiggle_alarm;
+
+dpad_x = -999;
+dpad_y = -999;
+dpad_rad = 0;
+thumbstick_xmod = 0;
+thumbstick_ymod = 0;
 </string>
           </argument>
         </arguments>
@@ -102,6 +108,9 @@ random_wiggle(wiggle_counter mod 7);
           <argument>
             <kind>1</kind>
             <string>draw_ui();
+
+//draw_set_color(c_white);
+//draw_text(Player_obj.x, Player_obj.y, "test" + string(point_direction(Control_obj.dpad_x, Control_obj.dpad_y, mouse_x, mouse_y)));
 </string>
           </argument>
         </arguments>
