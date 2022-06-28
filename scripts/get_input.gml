@@ -42,6 +42,38 @@ with (Player_obj)
         hold_right = mouse_right && (mouse_check_button(mb_left));
     }
     
+    if !(press_up || press_down || press_left || press_right || hold_up || hold_down || hold_left || hold_right)
+    {
+        var haxis = gamepad_axis_value(0, gp_axislh);
+        var vaxis = gamepad_axis_value(0, gp_axislv);
+        var stick_dir = point_direction(0, 0, haxis, vaxis);
+        var stick_speed = point_distance(0 ,0, haxis, vaxis);
+        
+        stick_up = (abs(angle_difference(stick_dir, 90)) <= 45*1.5) && stick_speed > 0.5;
+        stick_down = (abs(angle_difference(stick_dir, 270)) <= 45*1.5) && stick_speed > 0.5;
+        stick_left = (abs(angle_difference(stick_dir, 180)) <= 45*1.5) && stick_speed > 0.5;
+        stick_right = (abs(angle_difference(stick_dir, 0)) <= 45*1.5) && stick_speed > 0.5;
+        
+        pressed_button = gamepad_button_check_pressed(0, gp_face1) || gamepad_button_check_pressed(0, gp_face2)
+            || gamepad_button_check_pressed(0, gp_face3) || gamepad_button_check_pressed(0, gp_face4)
+            || gamepad_button_check_pressed(0, gp_shoulderl) || gamepad_button_check_pressed(0, gp_shoulderr)
+            || gamepad_button_check_pressed(0, gp_shoulderlb) || gamepad_button_check_pressed(0, gp_shoulderrb);
+        pressed_button = gamepad_button_check(0, gp_face1) || gamepad_button_check(0, gp_face2)
+            || gamepad_button_check(0, gp_face3) || gamepad_button_check(0, gp_face4)
+            || gamepad_button_check(0, gp_shoulderl) || gamepad_button_check(0, gp_shoulderr)
+            || gamepad_button_check(0, gp_shoulderlb) || gamepad_button_check(0, gp_shoulderrb);
+        
+        press_up = stick_up && pressed_button;
+        press_down = stick_down && pressed_button;
+        press_left = stick_left && pressed_button;
+        press_right = stick_right && pressed_button;
+        
+        hold_up = stick_up && held_button;
+        hold_down = stick_down && held_button;
+        hold_left = stick_left && held_button;
+        hold_right = stick_right && held_button;
+    }
+    
     move_player();
     
     if (hold_up) { Control_obj.thumbstick_ymod = -1; }
