@@ -46,6 +46,16 @@ with (Player_obj)
     {
         var haxis = gamepad_axis_value(0, gp_axislh);
         var vaxis = gamepad_axis_value(0, gp_axislv);
+        
+        var right_haxis = gamepad_axis_value(0, gp_axisrh);
+        var right_vaxis = gamepad_axis_value(0, gp_axisrh);
+        
+        if (right_haxis > 0.5) || (right_vaxis > 0.5)
+        {
+            haxis = right_haxis;
+            vaxis = left_haxis;
+        }
+        
         var stick_dir = point_direction(0, 0, haxis, vaxis);
         var stick_speed = point_distance(0 ,0, haxis, vaxis);
         
