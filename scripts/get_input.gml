@@ -48,7 +48,7 @@ with (Player_obj)
         var vaxis = gamepad_axis_value(0, gp_axislv);
         
         var right_haxis = gamepad_axis_value(0, gp_axisrh);
-        var right_vaxis = gamepad_axis_value(0, gp_axisrh);
+        var right_vaxis = gamepad_axis_value(0, gp_axisrv);
         
         if (abs(right_haxis) > 0.5) || (abs(right_vaxis) > 0.5)
         {
