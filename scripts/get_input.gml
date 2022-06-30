@@ -50,10 +50,10 @@ with (Player_obj)
         var right_haxis = gamepad_axis_value(0, gp_axisrh);
         var right_vaxis = gamepad_axis_value(0, gp_axisrh);
         
-        if (right_haxis > 0.5) || (right_vaxis > 0.5)
+        if (abs(right_haxis) > 0.5) || (abs(right_vaxis) > 0.5)
         {
             haxis = right_haxis;
-            vaxis = left_haxis;
+            vaxis = right_vaxis;
         }
         
         var stick_dir = point_direction(0, 0, haxis, vaxis);
@@ -68,7 +68,7 @@ with (Player_obj)
             || gamepad_button_check_pressed(0, gp_face3) || gamepad_button_check_pressed(0, gp_face4)
             || gamepad_button_check_pressed(0, gp_shoulderl) || gamepad_button_check_pressed(0, gp_shoulderr)
             || gamepad_button_check_pressed(0, gp_shoulderlb) || gamepad_button_check_pressed(0, gp_shoulderrb);
-        pressed_button = gamepad_button_check(0, gp_face1) || gamepad_button_check(0, gp_face2)
+        held_button = gamepad_button_check(0, gp_face1) || gamepad_button_check(0, gp_face2)
             || gamepad_button_check(0, gp_face3) || gamepad_button_check(0, gp_face4)
             || gamepad_button_check(0, gp_shoulderl) || gamepad_button_check(0, gp_shoulderr)
             || gamepad_button_check(0, gp_shoulderlb) || gamepad_button_check(0, gp_shoulderrb);
@@ -86,11 +86,11 @@ with (Player_obj)
     
     move_player();
     
-    if (hold_up) { Control_obj.thumbstick_ymod = -1; }
-    else if (hold_down) { Control_obj.thumbstick_ymod = 1; }
+    if (hold_up || stick_up) { Control_obj.thumbstick_ymod = -1; }
+    else if (hold_down || stick_down) { Control_obj.thumbstick_ymod = 1; }
     else { Control_obj.thumbstick_ymod = 0; }
     
-    if (hold_left) { Control_obj.thumbstick_xmod = -1; }
-    else if (hold_right) { Control_obj.thumbstick_xmod = 1; }
+    if (hold_left || stick_left) { Control_obj.thumbstick_xmod = -1; }
+    else if (hold_right || stick_right) { Control_obj.thumbstick_xmod = 1; }
     else { Control_obj.thumbstick_xmod = 0; }
 }
