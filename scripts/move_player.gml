@@ -41,7 +41,7 @@ if (up || down || left || right)
     if (smoke_dist >= 96)
     {
         var smoke = instance_create(x-16, y-16, Smoke_obj);
-        smoke.speed = 1;
+        smoke.speed = max(1.5, speed*0.5);
         smoke.direction = direction + 180;
     }
 }
