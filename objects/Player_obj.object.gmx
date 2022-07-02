@@ -32,7 +32,7 @@ instance_create(x, y, Camera_obj);
 animation_counter = 0;
 
 exhaustion = 0;
-max_exhaustion = 300;
+max_exhaustion = 100;
 </string>
           </argument>
         </arguments>

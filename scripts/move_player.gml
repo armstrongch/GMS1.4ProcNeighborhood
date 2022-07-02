@@ -77,3 +77,6 @@ else if (x > room_width-16) { x = room_width-16; }
 
 if (y < 16) { y = 16; }
 else if (y > room_height-176) { y = room_height-176;}
+
+
+if (exhaustion > 0) { exhaustion -= 0.02; }
