@@ -7,9 +7,9 @@ with (ColorManager_obj)
     light_colors[max_color_count] = make_color_rgb(244, 211, 94);
     max_color_count += 1;
     
-    //blue + purple, turd1 from Cardboard Moon
-    dark_colors[max_color_count] = make_color_rgb(99,52,131);
-    light_colors[max_color_count] = make_color_rgb(100,180,251);
+    //green + tan turd3 from Cardboard Moon
+    dark_colors[max_color_count] = make_color_rgb(251,180,140);
+    light_colors[max_color_count] = make_color_rgb(52,124,76);
     max_color_count += 1;
     
     //blue + green turd2 from Cardboard Moon
@@ -17,10 +17,11 @@ with (ColorManager_obj)
     light_colors[max_color_count] = make_color_rgb(164,251,195);
     max_color_count += 1;
     
-    //green + tan turd3 from Cardboard Moon
-    dark_colors[max_color_count] = make_color_rgb(251,180,140);
-    light_colors[max_color_count] = make_color_rgb(52,124,76);
+    //blue + purple, turd1 from Cardboard Moon
+    dark_colors[max_color_count] = make_color_rgb(99,52,131);
+    light_colors[max_color_count] = make_color_rgb(100,180,251);
     max_color_count += 1;
+    
     /*
     //deep blue + yellow skeletor from Riverbottom
     dark_colors[max_color_count] = make_color_rgb(75,59,147);
@@ -33,6 +34,6 @@ with (ColorManager_obj)
     max_color_count += 1;
     */
     
-    current_color_index = max_color_count;
+    current_color_index = max_color_count - 2;
     increment_global_color();
 }

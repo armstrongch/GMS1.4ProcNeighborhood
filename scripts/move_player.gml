@@ -1,6 +1,8 @@
-var move_speed = 4;
+var move_speed = 3.75;
 var max_speed = 5;
 var hold_move_threshold = move_speed;
+
+friction = 0.125;
 
 up = press_up || (hold_up && abs(vspeed) <= hold_move_threshold);
 down = press_down || (hold_down && abs(vspeed) <= hold_move_threshold);
@@ -18,6 +20,7 @@ if (hspeed > max_speed) { hspeed = max_speed; }
 else if (hspeed < -max_speed) { hspeed = -max_speed; }
 
 if (speed > max_speed) { speed = max_speed; }
+
 /*
 for (var i = 0; i < instance_number(DrawPointsParent); i += 1)
 {
@@ -58,13 +61,11 @@ if (speed > 0)
     }
 }
 
-friction = 0.3;
-
 //my own gravity implementation
-if (vspeed != 0)
+/*if (vspeed != 0)
 {
     vspeed += 0.2;
-}
+}*/
 
 if (x < 16) { x = 16; }
 else if (x > room_width-16) { x = room_width-16; }
