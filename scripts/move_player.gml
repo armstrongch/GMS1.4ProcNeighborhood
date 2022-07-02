@@ -4,15 +4,20 @@ var hold_move_threshold = move_speed;
 
 friction = 0.125;
 
-up = press_up || (hold_up && abs(vspeed) <= hold_move_threshold);
-down = press_down || (hold_down && abs(vspeed) <= hold_move_threshold);
-left = press_left || (hold_left && abs(hspeed) <= hold_move_threshold);
-right = press_right || (hold_right && abs(hspeed) <= hold_move_threshold);
+up = press_up || (hold_up && abs(speed) <= hold_move_threshold);
+down = press_down || (hold_down && abs(speed) <= hold_move_threshold);
+left = press_left || (hold_left && abs(speed) <= hold_move_threshold);
+right = press_right || (hold_right && abs(speed) <= hold_move_threshold);
 
-if (up) { vspeed -= move_speed; }
-if (down) { vspeed += move_speed; }
-if (left) { hspeed -= move_speed; }
-if (right) { hspeed += move_speed; }
+var vector_x = right - left;
+var vector_y = down - up;
+if ((abs(vector_x) + abs(vector_y)) > 0)
+{
+    exhaustion += 1;
+    var vector_angle = point_direction(0, 0, vector_x, vector_y);
+    hspeed += cos(vector_angle/180*pi)*move_speed;;
+    vspeed -= sin(vector_angle/180*pi)*move_speed; 
+}
 
 if (vspeed > max_speed) { vspeed = max_speed; }
 else if (vspeed < -max_speed) { vspeed = -max_speed; }

@@ -56,3 +56,23 @@ draw_circle(
     dpad_y + thumbstick_ymod*dpad_rad/2,
     dpad_rad/5,
     false);
+ 
+ex_meter_x = x1 + ui_width*0.25;
+ex_meter_y = y1 + ui_height*0.5;
+ex_meter_rad = ui_height*0.4;
+   
+draw_set_color(global.dark_color);
+draw_circle(ex_meter_x, ex_meter_y, ex_meter_rad, false);
+draw_set_color(global.light_color);
+for (var i = 0; i < min(Player_obj.exhaustion, Player_obj.max_exhaustion); i += 1)
+{
+    start_angle_rad = 360/Player_obj.max_exhaustion*i/180*pi;
+    end_angle_rad = 360/Player_obj.max_exhaustion*(i+1)/180*pi;
+    draw_triangle(
+        ex_meter_x, ex_meter_y,
+        ex_meter_x + cos(start_angle_rad)*ex_meter_rad*1.1,
+        ex_meter_y - sin(start_angle_rad)*ex_meter_rad*1.1,
+        ex_meter_x + cos(end_angle_rad)*ex_meter_rad*1.1,
+        ex_meter_y - sin(end_angle_rad)*ex_meter_rad*1.1,
+        false);
+}
