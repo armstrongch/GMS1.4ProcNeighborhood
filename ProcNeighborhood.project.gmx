@@ -16,6 +16,7 @@
     <sprite>sprites\FencePH_spr</sprite>
     <sprite>sprites\Wave_spr</sprite>
     <sprite>sprites\WaterPH_spr</sprite>
+    <sprite>sprites\PaletteTest_spr</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>

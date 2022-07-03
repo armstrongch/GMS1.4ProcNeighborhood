@@ -33,6 +33,7 @@ animation_counter = 0;
 
 exhaustion = 0;
 max_exhaustion = 100;
+exhaustion_reset = false;
 </string>
           </argument>
         </arguments>

@@ -4,10 +4,25 @@ var hold_move_threshold = move_speed;
 
 friction = 0.125;
 
-up = press_up || (hold_up && abs(speed) <= hold_move_threshold);
-down = press_down || (hold_down && abs(speed) <= hold_move_threshold);
-left = press_left || (hold_left && abs(speed) <= hold_move_threshold);
-right = press_right || (hold_right && abs(speed) <= hold_move_threshold);
+if (exhaustion >= max_exhaustion)
+{
+    exhaustion_reset = true;
+}
+if (exhaustion_reset)
+{
+    exhaustion -= max_exhaustion/75;
+    if (exhaustion <= 0)
+    {
+        exhaustion_reset = false;
+    }
+}
+else
+{
+    up = press_up || (hold_up && abs(speed) <= hold_move_threshold);
+    down = press_down || (hold_down && abs(speed) <= hold_move_threshold);
+    left = press_left || (hold_left && abs(speed) <= hold_move_threshold);
+    right = press_right || (hold_right && abs(speed) <= hold_move_threshold);
+}
 
 var vector_x = right - left;
 var vector_y = down - up;

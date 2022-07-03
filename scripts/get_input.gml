@@ -84,6 +84,7 @@ with (Player_obj)
         hold_right = stick_right && held_button;
     }
     
+    
     move_player();
     
     if (hold_up || stick_up) { Control_obj.thumbstick_ymod = -1; }

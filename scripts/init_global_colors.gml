@@ -22,6 +22,16 @@ with (ColorManager_obj)
     light_colors[max_color_count] = make_color_rgb(100,180,251);
     max_color_count += 1;
     
+    //Autumn
+    dark_colors[max_color_count] = c_white;
+    light_colors[max_color_count] = make_color_rgb(201, 60, 32);
+    max_color_count += 1;
+    
+    //Skyline
+    dark_colors[max_color_count] = make_color_rgb(16, 54, 143);
+    light_colors[max_color_count] = make_color_rgb(255, 142, 66);
+    max_color_count += 1;
+    
     /*
     //deep blue + yellow skeletor from Riverbottom
     dark_colors[max_color_count] = make_color_rgb(75,59,147);
