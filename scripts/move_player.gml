@@ -1,8 +1,12 @@
 var move_speed = 3.75;
 var max_speed = 5;
-var hold_move_threshold = move_speed;
+var hold_move_threshold = 4.5;
+//scaling friction
+//max: 0.1
+//min: 0.04
 
-friction = 0.125;
+
+friction = 0.04 + (speed/max_speed)*0.06;
 
 if (exhaustion >= max_exhaustion)
 {
