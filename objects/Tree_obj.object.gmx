@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (irandom(1) == 0) { type = "tree"; }
-else { type = "tree2"; }
+            <string>if (irandom(1) == 0) { type = "tree"; } else { type = "tree2"; }
 event_inherited();
+soft_collisions = true;
 </string>
           </argument>
         </arguments>

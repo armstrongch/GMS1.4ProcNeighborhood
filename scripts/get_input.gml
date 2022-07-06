@@ -8,6 +8,11 @@ if (keyboard_check_pressed(ord('C')))
     with (Config_obj) { auto_wiggle = !auto_wiggle; }
 }
 
+if (keyboard_check_pressed(ord('X')))
+{
+    with (Player_obj) { exhaustion = 0; }
+}
+
 with (Player_obj)
 {
     press_up = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord('W'));
@@ -19,6 +24,8 @@ with (Player_obj)
     hold_down = keyboard_check(vk_down) || keyboard_check(ord('S'));
     hold_left = keyboard_check(vk_left) || keyboard_check(ord('A'));
     hold_right = keyboard_check(vk_right) || keyboard_check(ord('D'));
+    
+    mouse_up = false; mouse_down = false; mouse_left = false; mouse_right = false;
     
     if !(press_up || press_down || press_left || press_right || hold_up || hold_down || hold_left || hold_right)
     && (point_distance(Control_obj.dpad_x, Control_obj.dpad_y, mouse_x, mouse_y) <= Control_obj.dpad_rad)
@@ -41,6 +48,8 @@ with (Player_obj)
         hold_left = mouse_left && (mouse_check_button(mb_left));
         hold_right = mouse_right && (mouse_check_button(mb_left));
     }
+    
+    stick_up = false; stick_down = false; stick_left = false; stick_right = false;
     
     if !(press_up || press_down || press_left || press_right || hold_up || hold_down || hold_left || hold_right)
     {

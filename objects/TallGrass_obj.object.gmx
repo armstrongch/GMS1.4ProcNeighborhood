@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>type = "tall_grass";
 event_inherited();
+soft_collisions = true;
 </string>
           </argument>
         </arguments>

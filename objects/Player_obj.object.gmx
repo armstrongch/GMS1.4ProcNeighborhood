@@ -34,6 +34,8 @@ animation_counter = 0;
 exhaustion = 0;
 max_exhaustion = 100;
 exhaustion_reset = false;
+
+colliding_softly = false;
 </string>
           </argument>
         </arguments>

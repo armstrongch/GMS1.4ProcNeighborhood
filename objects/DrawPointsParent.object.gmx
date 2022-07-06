@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>get_base_points(type);
 solid_collisions = false;
+soft_collisions = false;
 </string>
           </argument>
         </arguments>
@@ -51,7 +52,7 @@ solid_collisions = false;
             <kind>1</kind>
             <string>visible = (abs(x-Camera_obj.x) &lt;= 200) &amp;&amp; (abs(y-Camera_obj.y) &lt;= 400);
 
-if (solid_collisions)
+if visible &amp;&amp; (solid_collisions || soft_collisions)
 {
     collide_with_player();
 }

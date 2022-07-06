@@ -6,7 +6,8 @@ var hold_move_threshold = 4.5;
 //min: 0.04
 
 
-friction = 0.04 + (speed/max_speed)*0.06;
+friction = 0.04 + (speed/max_speed)*0.06 + colliding_softly*0.2;
+colliding_softly = false;
 
 if (exhaustion >= max_exhaustion)
 {
@@ -45,16 +46,6 @@ else if (hspeed < -max_speed) { hspeed = -max_speed; }
 
 if (speed > max_speed) { speed = max_speed; }
 
-/*
-for (var i = 0; i < instance_number(DrawPointsParent); i += 1)
-{
-    var test_collider = instance_find(DrawPointsParent, i);
-    if (test_collider.visible && test_collider.id != id)
-    {
-        
-    }
-}
-*/
 
 if (up || down || left || right)
 {
