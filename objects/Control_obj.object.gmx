@@ -29,7 +29,7 @@
 instance_create(x, y, ColorManager_obj);
 instance_create(x, y, Config_obj);
 wiggle_counter = 0;
-wiggle_alarm = 10;
+wiggle_alarm = 15;
 alarm[0] = wiggle_alarm;
 
 dpad_x = -999;

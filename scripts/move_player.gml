@@ -46,7 +46,6 @@ else if (hspeed < -max_speed) { hspeed = -max_speed; }
 
 if (speed > max_speed) { speed = max_speed; }
 
-
 if (up || down || left || right)
 {
     var smoke_dist = 999;
