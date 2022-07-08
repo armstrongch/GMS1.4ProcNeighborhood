@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>randomize();
+            <string>scale_window();
+
+randomize();
 instance_create(x, y, ColorManager_obj);
 instance_create(x, y, Config_obj);
 wiggle_counter = 0;
