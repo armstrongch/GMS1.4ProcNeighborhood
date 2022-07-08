@@ -1,8 +1,4 @@
-var window_height = window_get_height();
-var scale_ratio = view_hport[0] / window_height;
+window_set_size(browser_height*0.95/1.5, browser_height*0.95);
 
-//port height = 10, window height = 15, scale_ratio = 0.66, port = port / 0.66
-
-
-view_hport[0] = view_hport[0] / scale_ratio;
-view_wport[0] = view_wport[0] / scale_ratio;
+var x_offset = (browser_width - window_get_width())/2;
+window_set_position(x_offset, 0);
