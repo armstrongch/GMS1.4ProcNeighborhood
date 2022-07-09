@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scale_window();
+            <string>//scale_window();
 
 randomize();
 instance_create(x, y, ColorManager_obj);
