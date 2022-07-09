@@ -61,6 +61,13 @@ if target_x &gt;= 0
         x = target_x;
         y = target_y;
         increment_global_color();
+        
+        with(DrawPointsParent)
+        {
+            visible = (abs(x-Camera_obj.x) &lt;= 200) &amp;&amp; (abs(y-Camera_obj.y) &lt;= 400);
+        }
+        //instance_deactivate_region(x-180, y-250, x+180, y+250, false, true);
+        //instance_activate_region(x-180, y-250, x+180, y+250, true);
     }
 }
 </string>
