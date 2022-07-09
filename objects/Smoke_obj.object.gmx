@@ -28,8 +28,8 @@
             <string>type = "smoke";
 event_inherited();
 gravity_direction = 90;
-gravity = 0.002;
-image_alpha = 0.3;
+gravity = 0.006;
+image_alpha = 0.175;
 </string>
           </argument>
         </arguments>
@@ -52,8 +52,8 @@ image_alpha = 0.3;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_alpha -= 0.04;
-if (image_alpha &lt;= 0.2)
+            <string>image_alpha -= 0.01;
+if (image_alpha &lt;= 0.1)
 {
     instance_destroy();
 }

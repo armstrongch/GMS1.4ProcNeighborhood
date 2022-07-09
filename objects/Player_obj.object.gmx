@@ -36,6 +36,11 @@ max_exhaustion = 100;
 exhaustion_reset = false;
 
 colliding_softly = false;
+
+direction = 90;
+
+hold_counter = 0;
+max_hold_counter = 5;
 </string>
           </argument>
         </arguments>
