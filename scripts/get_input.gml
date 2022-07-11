@@ -13,6 +13,11 @@ if (keyboard_check_pressed(ord('X')))
     with (Player_obj) { exhaustion = 0; }
 }
 
+if (keyboard_check_pressed(ord('V')))
+{
+    with (Player_obj) { y = 128; }
+}
+
 with (Player_obj)
 {
     press_up = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord('W'));

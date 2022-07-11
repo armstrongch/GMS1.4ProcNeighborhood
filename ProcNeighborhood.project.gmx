@@ -17,6 +17,8 @@
     <sprite>sprites\Wave_spr</sprite>
     <sprite>sprites\WaterPH_spr</sprite>
     <sprite>sprites\PaletteTest_spr</sprite>
+    <sprite>sprites\Skyline_spr</sprite>
+    <sprite>sprites\Gradient</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -52,6 +54,7 @@
       <object>objects\Path_obj</object>
     </objects>
     <object>objects\Config_obj</object>
+    <object>objects\Skyline_obj</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Game_rm</room>
