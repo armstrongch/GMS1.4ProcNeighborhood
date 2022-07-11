@@ -19,6 +19,7 @@
     <sprite>sprites\PaletteTest_spr</sprite>
     <sprite>sprites\Skyline_spr</sprite>
     <sprite>sprites\Gradient</sprite>
+    <sprite>sprites\Bird_spr</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
