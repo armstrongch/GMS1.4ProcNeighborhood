@@ -15,7 +15,7 @@ if (keyboard_check_pressed(ord('X')))
 
 if (keyboard_check_pressed(ord('V')))
 {
-    with (Player_obj) { y = 128; }
+    with (Player_obj) { y = 128; x = room_width - 720; }
 }
 
 with (Player_obj)

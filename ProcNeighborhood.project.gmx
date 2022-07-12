@@ -20,6 +20,9 @@
     <sprite>sprites\Skyline_spr</sprite>
     <sprite>sprites\Gradient</sprite>
     <sprite>sprites\Bird_spr</sprite>
+    <sprite>sprites\Star_spr</sprite>
+    <sprite>sprites\Leaf_spr</sprite>
+    <sprite>sprites\Hitbox_spr</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -36,6 +39,7 @@
     <script>scripts\collide_with_player.gml</script>
     <script>scripts\draw_ui.gml</script>
     <script>scripts\scale_window.gml</script>
+    <script>scripts\generate_birds.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\Control_obj</object>
@@ -55,7 +59,12 @@
       <object>objects\Path_obj</object>
     </objects>
     <object>objects\Config_obj</object>
-    <object>objects\Skyline_obj</object>
+    <objects name="Skyline">
+      <object>objects\Skyline_obj</object>
+      <object>objects\Bird_obj</object>
+      <object>objects\Star_obj</object>
+    </objects>
+    <object>objects\Checkpoint_obj</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Game_rm</room>
