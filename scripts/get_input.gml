@@ -33,7 +33,7 @@ with (Player_obj)
     mouse_up = false; mouse_down = false; mouse_left = false; mouse_right = false;
     
     if !(press_up || press_down || press_left || press_right || hold_up || hold_down || hold_left || hold_right)
-    && (point_distance(Control_obj.dpad_x, Control_obj.dpad_y, mouse_x, mouse_y) <= Control_obj.dpad_rad)
+    /*&& (point_distance(Control_obj.dpad_x, Control_obj.dpad_y, mouse_x, mouse_y) <= Control_obj.dpad_rad)*/
     {
         var mouse_dir = point_direction(Control_obj.dpad_x, Control_obj.dpad_y, mouse_x, mouse_y);
         

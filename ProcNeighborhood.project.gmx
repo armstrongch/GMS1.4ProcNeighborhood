@@ -23,6 +23,7 @@
     <sprite>sprites\Star_spr</sprite>
     <sprite>sprites\Leaf_spr</sprite>
     <sprite>sprites\Hitbox_spr</sprite>
+    <sprite>sprites\Font_spr</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -41,6 +42,7 @@
     <script>scripts\scale_window.gml</script>
     <script>scripts\generate_birds.gml</script>
   </scripts>
+  <fonts name="fonts"/>
   <objects name="objects">
     <object>objects\Control_obj</object>
     <object>objects\DrawPointsParent</object>

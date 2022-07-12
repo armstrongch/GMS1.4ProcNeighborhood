@@ -63,10 +63,18 @@ max_hold_counter = 5;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var cp = collision_circle(x, y, 24, Checkpoint_obj, false, true);
-if (cp != noone)
+            <string>
+if (instance_number(Checkpoint_obj) &gt; 0)
 {
-    with (cp) { instance_destroy(); }
+    var cp = collision_circle(x, y, 24, Checkpoint_obj, false, true);
+    if (cp != noone)
+    {
+        with (cp) { instance_destroy(); }
+    }
+}
+else
+{
+    Control_obj.timer_running = false;
 }
 </string>
           </argument>

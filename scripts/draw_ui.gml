@@ -76,3 +76,9 @@ for (var i = 0; i < min(Player_obj.exhaustion, Player_obj.max_exhaustion); i += 
         ex_meter_y - sin(end_angle_rad)*ex_meter_rad*1.1,
         false);
 }
+
+draw_set_color(global.dark_color);
+draw_set_valign(fa_middle);
+draw_set_halign(fa_center);
+//draw_set_font(Game_ft);
+draw_text(x1 + ui_width/2, y1 + 12, "0.00");

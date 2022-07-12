@@ -40,6 +40,11 @@ else
 
 if (up || down || left || right)
 {
+    if (instance_number(Checkpoint_obj) > 0)
+    {
+        Control_obj.timer_running = true;
+    }
+    
     //Every step adds exhaustion
     exhaustion += 1;
     
