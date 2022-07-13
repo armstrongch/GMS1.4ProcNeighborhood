@@ -247,7 +247,14 @@
     <option_html5_icon>Configs\Default\html5\fav.ico</option_html5_icon>
     <option_html5_index>-1</option_html5_index>
     <option_html5_interpolate>0</option_html5_interpolate>
-    <option_html5_jsprepend></option_html5_jsprepend>
+    <option_html5_jsprepend>if(typeof AudioContext != "undefined" || typeof webkitAudioContext != "undefined") {
+   var resumeAudio = function() {
+      if(typeof g_WebAudioContext == "undefined" || g_WebAudioContext == null) return;
+      if(g_WebAudioContext.state == "suspended") g_WebAudioContext.resume();
+      document.removeEventListener("click", resumeAudio);
+   };
+   document.addEventListener("click", resumeAudio);
+}</option_html5_jsprepend>
     <option_html5_loadingbar>-1</option_html5_loadingbar>
     <option_html5_localrunalert>True</option_html5_localrunalert>
     <option_html5_outputdebugtoconsole>True</option_html5_outputdebugtoconsole>

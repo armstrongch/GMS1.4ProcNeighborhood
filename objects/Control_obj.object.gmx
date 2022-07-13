@@ -47,8 +47,8 @@ generate_birds();
 timer_running = false;
 timer = 0;
 
-breathe_in = true;
-breathe_counter = 0;
+soundtrack_num = -1;
+soundtrack_count = 5;
 </string>
           </argument>
         </arguments>

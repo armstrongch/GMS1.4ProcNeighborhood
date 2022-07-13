@@ -4,7 +4,13 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\Music1_snd</sound>
+    <sound>sound\Music2_snd</sound>
+    <sound>sound\Music3_snd</sound>
+    <sound>sound\Music4_snd</sound>
+    <sound>sound\Music5_snd</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\Window_spr</sprite>
     <sprite>sprites\TreePH_spr</sprite>
@@ -41,6 +47,8 @@
     <script>scripts\draw_ui.gml</script>
     <script>scripts\scale_window.gml</script>
     <script>scripts\generate_birds.gml</script>
+    <script>scripts\play_music.gml</script>
+    <script>scripts\get_music_from_index.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\Control_obj</object>
