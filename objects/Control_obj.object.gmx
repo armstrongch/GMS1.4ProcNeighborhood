@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//scale_window();
+            <string>scale_window();
 
 randomize();
 instance_create(x, y, ColorManager_obj);
@@ -46,6 +46,9 @@ generate_birds();
 
 timer_running = false;
 timer = 0;
+
+breathe_in = true;
+breathe_counter = 0;
 </string>
           </argument>
         </arguments>
