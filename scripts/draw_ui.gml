@@ -77,8 +77,18 @@ for (var i = 0; i < min(Player_obj.exhaustion, Player_obj.max_exhaustion); i += 
         false);
 }
 
-draw_set_color(global.dark_color);
-draw_set_valign(fa_middle);
-draw_set_halign(fa_center);
-//draw_set_font(Game_ft);
-draw_text(x1 + ui_width/2, y1 + 12, "0.00");
+
+var temp_timer = timer;
+var hund_thous = floor(temp_timer/100000); temp_timer -= hund_thous*100000;
+var ten_thous = floor(temp_timer/10000); temp_timer -= ten_thous*10000;
+var thous = floor(temp_timer/1000); temp_timer -= thous*1000;
+var hunds = floor(temp_timer/100); temp_timer -= hunds*100;
+var tens = floor(temp_timer/10); temp_timer -= tens*10;
+var ones = temp_timer;
+
+draw_sprite_ext(Font_spr, hund_thous, x1 + ui_width/2 - 24, y1+12, 1, 1, 0, global.dark_color, 1);
+draw_sprite_ext(Font_spr, ten_thous, x1 + ui_width/2 - 12, y1+12, 1, 1, 0, global.dark_color, 1);
+draw_sprite_ext(Font_spr, thous, x1 + ui_width/2, y1+12, 1, 1, 0, global.dark_color, 1);
+draw_sprite_ext(Font_spr, hunds, x1 + ui_width/2 + 12, y1+12, 1, 1, 0, global.dark_color, 1);
+draw_sprite_ext(Font_spr, tens, x1 + ui_width/2 + 24, y1+12, 1, 1, 0, global.dark_color, 1);
+

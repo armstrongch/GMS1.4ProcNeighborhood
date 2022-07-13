@@ -1920,11 +1920,9 @@ instance_create(960, 0, Skyline_obj);</code>
     <instance objName="Star_obj" x="1552" y="16" name="inst_6CCCEA8F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Star_obj" x="1584" y="32" name="inst_FE3130D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Star_obj" x="1504" y="16" name="inst_EFF18007" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Checkpoint_obj" x="800" y="1296" name="inst_27B00B18" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Checkpoint_obj" x="480" y="1312" name="inst_C21D51D3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Checkpoint_obj" x="160" y="1040" name="inst_1F4F42DF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Checkpoint_obj" x="1440" y="672" name="inst_84A110ED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Checkpoint_obj" x="176" y="480" name="inst_C30D10D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Checkpoint_obj" x="1280" y="256" name="inst_BFB2EE88" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>

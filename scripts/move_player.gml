@@ -3,7 +3,7 @@ var tap_speed_increment = 1;
 var max_speed = 5;
 
 //Set friction and reset soft collision flag
-friction = 0.04 + colliding_softly*0.06 + exhaustion_reset*0.1;
+friction = 0.03 + colliding_softly*0.06 + exhaustion_reset*0.1;
 colliding_softly = false;
 
 //If exhausted, take a breather
@@ -13,7 +13,7 @@ if (exhaustion >= max_exhaustion)
 }
 if (exhaustion_reset)
 {
-    exhaustion -= max_exhaustion/120;
+    exhaustion -= max_exhaustion/150;
     if (exhaustion <= 0)
     {
         exhaustion_reset = false;

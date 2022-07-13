@@ -32,7 +32,7 @@ instance_create(x, y, Camera_obj);
 animation_counter = 0;
 
 exhaustion = 0;
-max_exhaustion = 100;
+max_exhaustion = 130;
 exhaustion_reset = false;
 
 colliding_softly = false;
@@ -40,7 +40,7 @@ colliding_softly = false;
 direction = 90;
 
 hold_counter = 0;
-max_hold_counter = 5;
+max_hold_counter = 2;
 </string>
           </argument>
         </arguments>

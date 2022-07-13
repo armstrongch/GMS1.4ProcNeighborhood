@@ -42,7 +42,6 @@
     <script>scripts\scale_window.gml</script>
     <script>scripts\generate_birds.gml</script>
   </scripts>
-  <fonts name="fonts"/>
   <objects name="objects">
     <object>objects\Control_obj</object>
     <object>objects\DrawPointsParent</object>
