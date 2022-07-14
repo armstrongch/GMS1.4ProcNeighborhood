@@ -30,6 +30,7 @@
     <sprite>sprites\Leaf_spr</sprite>
     <sprite>sprites\Hitbox_spr</sprite>
     <sprite>sprites\Font_spr</sprite>
+    <sprite>sprites\ClickToBegin_spr</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
