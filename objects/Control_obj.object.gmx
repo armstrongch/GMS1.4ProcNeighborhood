@@ -120,6 +120,7 @@ random_wiggle(wiggle_counter mod 7);
           <argument>
             <kind>1</kind>
             <string>get_input();
+play_music();
 if (timer_running) { timer += 1; }
 </string>
           </argument>
