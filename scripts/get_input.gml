@@ -1,5 +1,6 @@
 if (keyboard_check_pressed(ord('R')))
 {
+    audio_stop_all();
     room_restart();
 }
 
@@ -8,7 +9,7 @@ if (keyboard_check_pressed(ord('C')))
     with (Config_obj) { auto_wiggle = !auto_wiggle; }
 }
 
-if (keyboard_check_pressed(ord('X')))
+/*if (keyboard_check_pressed(ord('X')))
 {
     with (Player_obj) { exhaustion = 0; }
 }
@@ -16,7 +17,7 @@ if (keyboard_check_pressed(ord('X')))
 if (keyboard_check_pressed(ord('V')))
 {
     with (Player_obj) { y = 128; x = room_width - 720; }
-}
+}*/
 
 with (Player_obj)
 {
